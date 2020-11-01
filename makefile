@@ -1,8 +1,9 @@
 NAME:=ft_xlib.a
-FILES:=
+FILES:=	ftx_matrix4i_new\
+
 IDIR:= includesa
 FLAGS:=-Werror -Wextra -Wall
-SRCSDIR=srcs
+SRCSDIR=srcs/
 BINS:=$(addsuffix .o, $(FILES))
 BINS:=$(addprefix $(SRCSDIR), $(FILES))
 
@@ -13,7 +14,7 @@ all:$(NAME)
 	ranlib $(NAME)
 
 .c.o:
-	gcc $(FLAGS) -I$(IDIR) -o $@ $<
+	gcc $(FLAGS) -Iincludes/ -o $@ $<
 
 clean:
 	rm -f $(BINS)
