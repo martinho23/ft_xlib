@@ -1,5 +1,8 @@
 NAME:=ft_xlib.a
-FILES:=	ftx_matrix4i_new\
+FILES:=	ftx_matrix4i_new \
+		ftx_matrix4i_delete \
+		ftx_matrix4i_print \
+		ftx_matrix4i_new_by_return
 
 IDIR:= includesa
 FLAGS:=-Werror -Wextra -Wall
