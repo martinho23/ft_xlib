@@ -5,7 +5,7 @@
 ** Matrix's of Integers
 */
 /*Costum type def for a Integers 4x4 Matrix*/
-typedef	int		*t_ftx_matrix4i[4];
+typedef int     **t_ftx_matrix4i;
 /*Allocate Integer 4x4 Matrix*/
 void			ftx_matrix4i_new(t_ftx_matrix4i *matrixToInit);
 t_ftx_matrix4i	ftx_matrix4i_new_by_return(void);
