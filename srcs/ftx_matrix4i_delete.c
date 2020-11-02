@@ -6,7 +6,7 @@
      int   i;
 
      i = 0;
-     while(*matrixToDelete && *matrixToDelete[i][j] && i < FTX_MATRIX4_LENGTH)
+     while(*matrixToDelete && *matrixToDelete[i] && i < FTX_MATRIX4_LENGTH)
      {
          free(*matrixToDelete[i]);
          *matrixToDelete[i] = NULL;
