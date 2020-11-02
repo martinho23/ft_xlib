@@ -6,7 +6,7 @@
      int   i;
 
      i = 0;
-     while(i < 4)
+     while(i < FTX_MATRIX4_LENGTH)
      {
          free(*matrixToDel[i]);
          *matrixToDel[i] = NULL;

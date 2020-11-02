@@ -2,6 +2,11 @@
 #define LIBFTX_PRIV_H
 
 /*
+** Matrix's DEFINES
+*/
+#define FTX_MATRIX4_LENGTH 4
+#define FTX_MATRIX3_LENGTH 3
+/*
 ** Matrix's of Integers
 */
 /*Costum type def for a Integers 4x4 Matrix*/

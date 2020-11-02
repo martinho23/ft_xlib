@@ -18,10 +18,10 @@ void    ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint)
     int     j;
 
     i = 0;
-    while(i < 4)
+    while(i < FTX_MATRIX4_LENGTH)
     {
         j = 0;
-        while (j < 4)
+        while (j < FTX_MATRIX4_LENGTH)
         {
             ftx_matrix4i_print_element(i, j, matrixToPrint[i][j]);
             j++;
