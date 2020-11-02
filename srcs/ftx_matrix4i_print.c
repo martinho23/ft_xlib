@@ -21,7 +21,7 @@ void    ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint)
     while(i < FTX_MATRIX4_LENGTH)
     {
         j = 0;
-        while (j < FTX_MATRIX4_LENGTH)
+        while (matrixToPrint && matrixToPrint[i][j]  && j < FTX_MATRIX4_LENGTH)
         {
             ftx_matrix4i_print_element(i, j, matrixToPrint[i][j]);
             j++;

@@ -1,17 +1,17 @@
  #include "../includes/libftx_priv.h"
  #include <stdlib.h>
 
- void   ftx_matrix4i_delete(t_ftx_matrix4i *matrixToDel)
+ void   ftx_matrix4i_delete(t_ftx_matrix4i *matrixToDelete)
  {
      int   i;
 
      i = 0;
-     while(i < FTX_MATRIX4_LENGTH)
+     while(*matrixToDelete && *matrixToDelete[i][j] && i < FTX_MATRIX4_LENGTH)
      {
-         free(*matrixToDel[i]);
-         *matrixToDel[i] = NULL;
+         free(*matrixToDelete[i]);
+         *matrixToDelete[i] = NULL;
         i++;
      }
-     free(*matrixToDel);
-     *matrixToDel = NULL;
+     free(*matrixToDelete);
+     *matrixToDelete = NULL;
  }
