@@ -17,6 +17,6 @@ t_ftx_matrix4i	ftx_matrix4i_new_by_return(void);
 /*Delete allocated Integer 4x4 Matrix*/
 void			ftx_matrix4i_delete(t_ftx_matrix4i *matrixToDelete);
 /*Print a Integer 4x4 Matrix*/
-void			ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint);
+void			ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint, char *matrixName);
 
 #endif /* !LIBFTX_h */
