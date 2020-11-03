@@ -4,7 +4,7 @@
 
 void	ftx_matrixni_new(t_ftx_matrixni *matrixToInit, size_t matrixCollums, size_t matrixRows)
 {
-	int				i;
+	size_t  i;
 
 	ft_thrower(!(*matrixToInit = (int **)malloc(sizeof(int *) * matrixCollums)),\
 	"Error could not alocate Integer NxN Matrix\n");

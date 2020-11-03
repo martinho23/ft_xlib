@@ -4,7 +4,7 @@
 
 void   ftx_matrixni_delete(t_ftx_matrixni *matrixToDelete, size_t matrixCollums)
 {
-    int   i;
+    size_t  i;
 
     i = 0;
     if (!(*matrixToDelete))

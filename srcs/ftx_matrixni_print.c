@@ -14,8 +14,8 @@ static  void ftx_matrix_print_element(int i, int j, int value)
 
 
 void    ftx_matrixni_print(t_ftx_matrixni matrixToPrint, char *matrixName, size_t matrixCollums, size_t matrixRows){
-    int     i;
-    int     j;
+    size_t  i;
+    size_t  j;
 
     i = 0;
     ft_putstr("Printing matrix ");
