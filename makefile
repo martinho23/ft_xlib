@@ -5,7 +5,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_matrix4i_new_by_return
 
 IDIR:=includes
-CFLAGS:=-Werror -Wextra -Wall
+CFLAGS:=-Werror -Wextra -Wall -g
 SRCSDIR=srcs/
 BINS:=$(addsuffix .o, $(FILES))
 BINS:=$(addprefix $(SRCSDIR), $(BINS))
