@@ -28,14 +28,14 @@ void    ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint, char *matrixName)
     }
     while(i < FTX_MATRIX4_LENGTH)
     {
+        if (!(matrixToPrint[i]))
+        {
+            ft_putstr("/!\\ WARNING: You're trying to print a NULL t_ftx_matrix4i\n");
+            return ;
+        }
         j = 0;
         while (j < FTX_MATRIX4_LENGTH)
         {
-            if (!(matrixToPrint[i][j]))
-            {
-                ft_putstr("/!\\ WARNING: You're trying to print a NULL t_ftx_matrix4i\n");
-                return ;
-            }
             ftx_matrix4i_print_element(i, j, matrixToPrint[i][j]);
             j++;
         }
