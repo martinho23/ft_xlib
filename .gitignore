@@ -1,2 +1,6 @@
 *.o
 *.a
+libft/*
+.vscode/launch.json
+.vscode/tasks.json
+Tests/a.out
