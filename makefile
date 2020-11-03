@@ -4,20 +4,22 @@ FILES:=	ftx_matrix4i_new \
 		ftx_matrix4i_print \
 		ftx_matrix4i_new_by_return
 
-IDIR:= includesa
-FLAGS:=-Werror -Wextra -Wall
+IDIR:=includes
+CFLAGS:=-Werror -Wextra -Wall
 SRCSDIR=srcs/
 BINS:=$(addsuffix .o, $(FILES))
-BINS:=$(addprefix $(SRCSDIR), $(FILES))
+BINS:=$(addprefix $(SRCSDIR), $(BINS))
+SRCS:=$(addsuffix .c, $(FILES))
+SRCS:=$(addprefix $(SRCSDIR), $(SRCS))
 
 $(NAME):$(BINS)
-
-all:$(NAME)
-	ar -rc $^
+	ar -rc $(NAME) $^
 	ranlib $(NAME)
 
-.c.o:
-	gcc $(FLAGS) -Iincludes/ -o $@ $<
+all:$(NAME)
+
+%.o: %.c
+	gcc $(CFLAGS) -I $(IDIR) -c $< -o $@
 
 clean:
 	rm -f $(BINS)
