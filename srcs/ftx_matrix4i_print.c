@@ -1,7 +1,7 @@
 #include "../includes/libftx_priv.h"
 #include "../includes/libft.h"
 
-static  ftx_matrix4i_print_element(int i, int j, int value, char *matrixName)
+static  void ftx_matrix4i_print_element(int i, int j, int value, char *matrixName)
 {
     ft_putstr("Printing matrix ");
     ft_putstr(matrixName);
@@ -11,7 +11,7 @@ static  ftx_matrix4i_print_element(int i, int j, int value, char *matrixName)
     ft_putnbr(j);
     ft_putstr("] = ");
     ft_putnbr(value);
-    ft_putchar("\n");
+    ft_putchar('\n');
 }
 
 void    ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint, char *matrixName)
