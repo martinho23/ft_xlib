@@ -2,7 +2,11 @@ NAME:=ft_xlib.a
 FILES:=	ftx_matrix4i_new \
 		ftx_matrix4i_delete \
 		ftx_matrix4i_print \
-		ftx_matrix4i_new_by_return
+		ftx_matrix4i_new_by_return \
+		ftx_matrixni_new \
+		ftx_matrixni_delete \
+		ftx_matrixni_print \
+		ftx_matrixni_new_by_return
 
 IDIR:=includes
 CFLAGS:=-Werror -Wextra -Wall -g
