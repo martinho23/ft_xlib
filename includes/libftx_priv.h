@@ -18,7 +18,7 @@ void            ftx_matrixni_new(t_ftx_matrixni *matrixToInit, size_t matrixColl
 void            ftx_matrixni_print(t_ftx_matrixni *matrixToPrint, size_t matrixCollums, size_t matrixRows); /*Print a Integer NxN Matrix*/
 void            ftx_matrixni_delete(t_ftx_matrixni *matrixToDelete, size_t matrixCollums, size_t matrixRows); /*Delete allocated Integer NxN Matrix*/
 
-t_ftx_matrixni  ftx_matrixni_new_by_return(size_t matrixCollums, size_t matrixRows); /*Allocate Integer 4x4 Matrix by reference*/
+t_ftx_matrixni  ftx_matrixni_new_by_return(size_t matrixCollums, size_t matrixRows); /*Allocate Integer NxN Matrix by reference*/
 
 /*Matrix4*/
 typedef int     **t_ftx_matrix4i; /*Costum typedef for a Integers 4x4 Matrix*/
