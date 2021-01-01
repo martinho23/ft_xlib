@@ -49,7 +49,7 @@ typedef struct s_ftx_vector4i
 	int		y;
 	int		z;
 	int		w;
-}	t_ftx_vextor4i;
+}	t_ftx_vector4i;
 
 /*Vector3f*/
 typedef struct s_ftx_vector3f
@@ -72,15 +72,15 @@ typedef struct s_ftx_vector4f
 **Vectors Functions
 */
 
-/*Add a and b vector to src by pointer*/
-void	ftx_vector3i_add(const t_ftx_vector3i *a, const t_ftx_vector3i *b, t_ftx_vector3i *src);
-void	ftx_vector3f_add(const t_ftx_vector3f *a, const t_ftx_vector3f *b, t_ftx_vector3f *src);
-void	ftx_vector4f_add(const t_ftx_vector4f *a, const t_ftx_vector4f *b, t_ftx_vector4f *src);
-void	ftx_vector4i_add(const t_ftx_vector4i *a, const t_ftx_vector4i *b, t_ftx_vector4i *src);
+/*Add a and b vector to dest by pointer*/
+void	ftx_vector3i_add(const t_ftx_vector3i *a, const t_ftx_vector3i *b, t_ftx_vector3i *dest);
+void	ftx_vector3f_add(const t_ftx_vector3f *a, const t_ftx_vector3f *b, t_ftx_vector3f *dest);
+void	ftx_vector4f_add(const t_ftx_vector4f *a, const t_ftx_vector4f *b, t_ftx_vector4f *dest);
+void	ftx_vector4i_add(const t_ftx_vector4i *a, const t_ftx_vector4i *b, t_ftx_vector4i *dest);
 
 /*Add a and b vectors and get the result by return value*/
 t_ftx_vector3f ftx_vector3f_add_by_return(const t_ftx_vector3f *a, const t_ftx_vector3f *b);
-t_ftx_vertor3i ftx_vector3i_add_by_return(const t_ftx_vector3i *a, const t_ftx_vector3i *b);
+t_ftx_vector3i ftx_vector3i_add_by_return(const t_ftx_vector3i *a, const t_ftx_vector3i *b);
 t_ftx_vector4f ftx_vector4f_add_by_return(const t_ftx_vector4f *a, const t_ftx_vector4f *b);
 t_ftx_vector4i ftx_vector4i_add_by_return(const t_ftx_vector4i *a, const t_ftx_vector4i *b);
 #endif /* !LIBFTX_h */

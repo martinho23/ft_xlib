@@ -1,4 +1,5 @@
 #include <libftx_priv.h>
+#include <libft.h>
 
 void	ftx_vector4f_add(const t_ftx_vector4f *a, const t_ftx_vector4f *b, t_ftx_vector4f *dest)
 {
