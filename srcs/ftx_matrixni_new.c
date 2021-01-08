@@ -19,8 +19,9 @@
  *
  * =====================================================================================
  */
-#include "../includes/libftx_priv.h"
-#include "../includes/libft.h"
+
+#include <libftx_priv.h>
+#include <libft.h>
 #include <stdlib.h>
 
 void	ftx_matrixni_new(t_ftx_matrixni *matrixToInit, size_t matrixCollums, size_t matrixRows)

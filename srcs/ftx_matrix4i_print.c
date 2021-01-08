@@ -17,7 +17,8 @@
  *
  * =====================================================================================
  */
-#include "../includes/libftx_priv.h"
+
+#include <libftx_priv.h>
 
 void    ftx_matrix4i_print(const t_ftx_matrix4i matrixToPrint, char *matrixName)
 {

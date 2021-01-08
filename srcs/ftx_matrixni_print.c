@@ -19,8 +19,9 @@
  *
  * =====================================================================================
  */
-#include "../includes/libftx_priv.h"
-#include "../includes/libft.h"
+
+#include <libftx_priv.h>
+#include <libft.h>
 
 static  void ftx_matrix_print_element(int i, int j, int value)
 {

@@ -18,8 +18,9 @@
  *
  * =====================================================================================
  */
-#include "../includes/libftx_priv.h"
-#include "../includes/libft.h"
+
+#include <libftx_priv.h>
+#include <libft.h>
 #include <stdlib.h>
 
 void   ftx_matrixni_delete(t_ftx_matrixni *matrixToDelete, size_t matrixCollums)
