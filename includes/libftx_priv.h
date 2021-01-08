@@ -96,4 +96,9 @@ t_ftx_vector3i	ftx_vector3i_sub_by_return(const t_ftx_vector3i *a, const t_ftx_v
 t_ftx_vector4f	ftx_vector4f_sub_by_return(const t_ftx_vector4f *a, const t_ftx_vector4f *b);
 t_ftx_vector4i	ftx_vector4i_sub_by_return(const t_ftx_vector4i *a, const t_ftx_vector4i *b);
 
+/*
+**Maths Functions
+*/
+float ftx_fast_rsqrt(float number);
+float ftx_sse_rsqrt(float number);
 #endif /* !LIBFTX_h */

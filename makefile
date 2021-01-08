@@ -22,7 +22,9 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4i_add \
 		ftx_vector4i_add_by_return \
 		ftx_vector4i_sub \
-		ftx_vector4f_sub_by_return
+		ftx_vector4f_sub_by_return \
+		ftx_fast_rsqrt \
+		ftx_sse_rsqrt
 
 IDIR:=includes
 CFLAGS:=-Werror -Wextra -Wall -g
