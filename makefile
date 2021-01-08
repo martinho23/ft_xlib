@@ -9,12 +9,20 @@ FILES:=	ftx_matrix4i_new \
 		ftx_matrixni_new_by_return \
 		ftx_vector3f_add \
 		ftx_vector3f_add_by_return \
+		ftx_vector3f_sub \
+		ftx_vector3f_sub_by_return \
 		ftx_vector3i_add \
 		ftx_vector3i_add_by_return \
+		ftx_vector3i_sub \
+		ftx_vector3i_sub_by_return \
 		ftx_vector4f_add \
 		ftx_vector4f_add_by_return \
+		ftx_vector4f_sub \
+		ftx_vector4f_sub_by_return \
 		ftx_vector4i_add \
-		ftx_vector4i_add_by_return
+		ftx_vector4i_add_by_return \
+		ftx_vector4i_sub \
+		ftx_vector4f_sub_by_return
 
 IDIR:=includes
 CFLAGS:=-Werror -Wextra -Wall -g

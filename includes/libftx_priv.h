@@ -17,7 +17,7 @@ typedef int     **t_ftx_matrixni; /*Costum typedef fo a Integer Matrix*/
 
 void            ftx_matrixni_delete(t_ftx_matrixni *matrixToDelete, size_t matrixCollums); /*Delete allocated Integer NxN Matrix*/
 void            ftx_matrixni_new(t_ftx_matrixni *matrixToInit, size_t matrixCollums, size_t matrixRows); /*Allocate Integer NxN Matrix*/
-void            ftx_matrixni_print(t_ftx_matrixni matrixToPrint, char *matricName, size_t matrixCollums, size_t matrixRows); /*Print a Integer NxN Matrix*/
+void            ftx_matrixni_print(const t_ftx_matrixni matrixToPrint, char *matricName, size_t matrixCollums, size_t matrixRows); /*Print a Integer NxN Matrix*/
 
 t_ftx_matrixni  ftx_matrixni_new_by_return(size_t matrixCollums, size_t matrixRows); /*Allocate Integer NxN Matrix by reference*/
 
@@ -26,7 +26,7 @@ typedef int     **t_ftx_matrix4i; /*Costum typedef for a Integers 4x4 Matrix*/
 
 void			ftx_matrix4i_new(t_ftx_matrix4i *matrixToInit); /*Allocate Integer 4x4 Matrix*/
 void			ftx_matrix4i_delete(t_ftx_matrix4i *matrixToDelete); /*Delete allocated Integer 4x4 Matrix*/
-void			ftx_matrix4i_print(t_ftx_matrix4i matrixToPrint, char *matrixName); /*Print a Integer 4x4 Matrix*/
+void			ftx_matrix4i_print(const t_ftx_matrix4i matrixToPrint, char *matrixName); /*Print a Integer 4x4 Matrix*/
 
 t_ftx_matrix4i	ftx_matrix4i_new_by_return(void); /*Allocate Integer 4x4 Matrix by reference*/
 
@@ -78,9 +78,22 @@ void	ftx_vector3f_add(const t_ftx_vector3f *a, const t_ftx_vector3f *b, t_ftx_ve
 void	ftx_vector4f_add(const t_ftx_vector4f *a, const t_ftx_vector4f *b, t_ftx_vector4f *dest);
 void	ftx_vector4i_add(const t_ftx_vector4i *a, const t_ftx_vector4i *b, t_ftx_vector4i *dest);
 
-/*Add a and b vectors and get the result by return value*/
+/*Add a and b vectors and returns the result*/
 t_ftx_vector3f ftx_vector3f_add_by_return(const t_ftx_vector3f *a, const t_ftx_vector3f *b);
 t_ftx_vector3i ftx_vector3i_add_by_return(const t_ftx_vector3i *a, const t_ftx_vector3i *b);
 t_ftx_vector4f ftx_vector4f_add_by_return(const t_ftx_vector4f *a, const t_ftx_vector4f *b);
 t_ftx_vector4i ftx_vector4i_add_by_return(const t_ftx_vector4i *a, const t_ftx_vector4i *b);
+
+/*Substract a and b vector to dest by pointer*/
+void	ftx_vector3f_sub(const t_ftx_vector3f *a, const t_ftx_vector3f *b, t_ftx_vector3f *dest);
+void	ftx_vector3i_sub(const t_ftx_vector3i *a, const t_ftx_vector3i *b, t_ftx_vector3i *dest);
+void	ftx_vector4f_sub(const t_ftx_vector4f *a, const t_ftx_vector4f *b, t_ftx_vector4f *dest);
+void	ftx_vector4i_sub(const t_ftx_vector4i *a, const t_ftx_vector4i *b, t_ftx_vector4i *dest);
+
+/*Substract a and b vectors and returns the result*/
+t_ftx_vector3f	ftx_vector3f_sub_by_return(const t_ftx_vector3f *a, const t_ftx_vector3f *b);
+t_ftx_vector3i	ftx_vector3i_sub_by_return(const t_ftx_vector3i *a, const t_ftx_vector3i *b);
+t_ftx_vector4f	ftx_vector4f_sub_by_return(const t_ftx_vector4f *a, const t_ftx_vector4f *b);
+t_ftx_vector4i	ftx_vector4i_sub_by_return(const t_ftx_vector4i *a, const t_ftx_vector4i *b);
+
 #endif /* !LIBFTX_h */
