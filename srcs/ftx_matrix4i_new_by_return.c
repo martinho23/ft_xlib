@@ -17,7 +17,7 @@
  * =====================================================================================
  */
 
-#include "../includes/libftx_priv.h"
+#include <libftx_priv.h>
 
 t_ftx_matrix4i  ftx_matrix4i_new_by_return(void)
 {
