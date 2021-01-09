@@ -6,7 +6,7 @@
  *    Description:  Function that adds 2 ftx_vector3f  (float vectors of 3 dimensions),
  *        the a value is a const pointer to the first vector to add, the b value is a
  *        const pointer to the second value to add, and the dest value is a pointer to the
- *        dest vector where the result is stored.
+ *        dest t_ftx_vector3f where the result is stored.
  *
  *        Version:  1.0
  *        Created:  03/01/2021 23:53:47
