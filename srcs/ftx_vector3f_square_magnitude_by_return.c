@@ -23,6 +23,7 @@
 float	ftx_vector3f_squared_magnitude_by_return(const t_ftx_vector3f *vec)
 {
 	float tmp;
+
 	ftx_vector3f_square_magnitude(vec, &tmp);
 
 return (tmp);

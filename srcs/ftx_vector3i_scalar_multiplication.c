@@ -20,9 +20,13 @@
  */
 
 #include <libftx_priv.h>
+#include <libft.h>
 
 void	ftx_vector3f_scalar_multiplication(const t_ftx_vector3f *vec, const float scalar, t_ftx_vector3f *dest)
 {
+	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector3i\n");
+	ft_thrower(!dest, "Can't store normalized t_ftx_vector3i on a NULL t_ftx_vector3i destination\n");
+
 	dest->x = vec->x * scalar;
 	dest->y = vec->y * scalar;
 	dest->z = vec->z * scalar;

@@ -19,9 +19,13 @@
  */
 
 #include <libftx_priv.h>
+#include <libft.h>
 
 void	ftx_vector3f_normalize(const t_ftx_vector3f *vec, t_ftx_vector3f *dest)
 {
+	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector3f\n");
+	ft_thrower(!dest, "Can't store normalized t_ftx_vector3f on a NULL t_ftx_vector3f destination\n");
+
 	const float reciproqueMagnitude = ftx_sse_rsqrt(ftx_vector3f_square_magnitude_by_return(vec));
 	ftx_vector3f_scalar_multiplication(vec, reciproqueMagnitude, dest);
 }

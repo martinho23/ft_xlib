@@ -25,9 +25,7 @@ t_ftx_vector4i	ftx_vector4i_scalar_multiplication_by_return(const t_ftx_vector4i
 {
 	t_ftx_vector4i	tmp;
 
-	tmp.x = vec->x * scalar;
-	tmp.y = vec->y * scalar;
-	tmp.z = vec->z * scalar;
+	ftx_vector4i_scalar_multiplication(vec, scalar, &tmp);
 
 	return (tmp);
 }

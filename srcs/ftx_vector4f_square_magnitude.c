@@ -20,8 +20,12 @@
  */
 
 #include <libftx_priv.h>
+#include <libft.h>
 
 void	ftx_vector4f_square_magnitude(const t_ftx_vector4f *vec, float *dest)
 {
+	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector4f\n");
+	ft_thrower(!dest, "Can't store normalized t_ftx_vector4f on a NULL t_ftx_vector4f destination\n");
+
 	*dest = (vec->x * vec->x + vec->y * vec->y + vec->z * vec->z + vec->w * vec->w);
 }

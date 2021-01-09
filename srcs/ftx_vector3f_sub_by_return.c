@@ -23,8 +23,8 @@
 
  t_ftx_vector3f ftx_vector3f_sub_by_return(const t_ftx_vector3f *a, const t_ftx_vector3f *b)
  {
-    t_ftx_vector3f dest;
+    t_ftx_vector3f tmp;
 
-    ftx_vector3f_sub(a, b, &dest);
-    return (dest);
+    ftx_vector3f_sub(a, b, &tmp);
+    return (tmp);
  }
