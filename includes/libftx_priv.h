@@ -96,6 +96,18 @@ t_ftx_vector3i	ftx_vector3i_sub_by_return(const t_ftx_vector3i *a, const t_ftx_v
 t_ftx_vector4f	ftx_vector4f_sub_by_return(const t_ftx_vector4f *a, const t_ftx_vector4f *b);
 t_ftx_vector4i	ftx_vector4i_sub_by_return(const t_ftx_vector4i *a, const t_ftx_vector4i *b);
 
+/*Multiplies a vector by a scalar value*/
+void	ftx_vector3f_scalar_multiplication(const t_ftx_vector3f *vec, const float scalar, t_ftx_vector3f *dest);
+void	ftx_vector3i_scalar_multiplication(const t_ftx_vector3i *vec, const int scalar, t_ftx_vector3i *dest);
+void	ftx_vector4f_scalar_multiplication(const t_ftx_vector4f *vec, const float scalar, t_ftx_vector4f *dest);
+void	ftx_vector4i_scalar_multiplication(const t_ftx_vector4i *vec, const int scalar, t_ftx_vector4i *des);
+
+/*Multiplies a vector by a scalar value and returns the result*/
+t_ftx_vector3f	ftx_vector3f_scalar_multiplication_by_return(const t_ftx_vector3f *vec, const float scalar);
+t_ftx_vector3i	ftx_vector3i_scalar_multiplication_by_return(const t_ftx_vector3i *vec, const int scalar);
+t_ftx_vector4f	ftx_vector4f_scalar_multiplication_by_return(const t_ftx_vector4f *vec, const float scalar);
+t_ftx_vector4i	ftx_vector4i_scalar_multiplication_by_return(const t_ftx_vector4i *vec, const int scalar);
+
 /*
 **Maths Functions
 */
