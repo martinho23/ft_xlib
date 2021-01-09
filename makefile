@@ -11,6 +11,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector3f_add_by_return \
 		ftx_vector3f_sub \
 		ftx_vector3f_sub_by_return \
+		ftx_vector3f_normalize \
 		ftx_vector3f_scalar_multiplication \
 		ftx_vector3f_scalar_multiplication_by_return \
 		ftx_vector3f_square_magnitude \
@@ -19,6 +20,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector3i_add_by_return \
 		ftx_vector3i_sub \
 		ftx_vector3i_sub_by_return \
+		ftx_vector3i_normalize \
 		ftx_vector3i_scalar_multiplication \
 		ftx_vector3i_scalar_multiplication_by_return \
 		ftx_vector3i_square_magnitude \
@@ -27,6 +29,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4f_add_by_return \
 		ftx_vector4f_sub \
 		ftx_vector4f_sub_by_return \
+		ftx_vector4f_normalize \
 		ftx_vector4f_scalar_multiplication \
 		ftx_vector4f_scalar_multiplication_by_return \
 		ftx_vector4f_square_magnitude \
@@ -35,6 +38,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4i_add_by_return \
 		ftx_vector4i_sub \
 		ftx_vector4i_sub_by_return \
+		ftx_vector4i_normalize \
 		ftx_vector4i_scalar_multiplication \
 		ftx_vector4i_scalar_multiplication_by_return \
 		ftx_vector4i_square_magnitude \
@@ -43,7 +47,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_sse_rsqrt
 
 IDIR:=includes
-CFLAGS:=-Werror -Wextra -Wall -g
+CFLAGS:=-Werror -Wextra -Wall -g -O3
 SRCSDIR=srcs/
 BINS:=$(addsuffix .o, $(FILES))
 BINS:=$(addprefix $(SRCSDIR), $(BINS))
