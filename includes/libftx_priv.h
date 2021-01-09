@@ -109,10 +109,16 @@ t_ftx_vector4f	ftx_vector4f_scalar_multiplication_by_return(const t_ftx_vector4f
 t_ftx_vector4i	ftx_vector4i_scalar_multiplication_by_return(const t_ftx_vector4i *vec, const int scalar);
 
 /*Calculates the Squared magnitude of a vector*/
-t_ftx_vector3f	ftx_vector3f_squared_magnitude(const t_ftx_vector3f *vec, float *dest);
-t_ftx_vector3i	ftx_vector3i_squared_magnitude(const t_ftx_vector3i *vec, float *dest);
-t_ftx_vector4f	ftx_vector4f_squared_magnitude(const t_ftx_vector4f *vec, float *dest);
-t_ftx_vector4i	ftx_vector4i_squared_magnitude(const t_ftx_vector4i *vec, float *dest);
+void	ftx_vector3f_square_magnitude(const t_ftx_vector3f *vec, float *dest);
+void	ftx_vector3i_square_magnitude(const t_ftx_vector3i *vec, int *dest);
+void	ftx_vector4f_square_magnitude(const t_ftx_vector4f *vec, float *dest);
+void	ftx_vector4i_square_magnitude(const t_ftx_vector4i *vec, int *dest);
+
+/*Calculates the Squared magnitue of a vector and return the result*/
+float	ftx_vector3f_squared_magnitude_by_return(const t_ftx_vector3f *vec);
+int	ftx_vector3i_squared_magnitude_by_return(const t_ftx_vector3i *vec);
+float	ftx_vector4f_squared_magnitude_by_return(const t_ftx_vector4f *vec);
+int	ftx_vector4i_squared_magnitude_by_return(const t_ftx_vector4i *vec);
 
 /*
 **Maths Functions
