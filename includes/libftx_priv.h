@@ -72,6 +72,12 @@ typedef struct s_ftx_vector4f
 **Vectors Functions
 */
 
+/*Assign vectors values*/
+void	ftx_vector3f_populate(const float x, const float y, const float z, t_ftx_vector3f *dest);
+void	ftx_vector3i_populate(const int x, const int y, const int z, t_ftx_vector3i *dest);
+void	ftx_vector4f_populate(const float x, const float y, const float z, const float w, t_ftx_vector4f *dest);
+void	ftx_vector4i_populate(const int x, const int y, const int z, const int w, t_ftx_vector4i *dest);
+
 /*Add a and b vector to dest by pointer*/
 void	ftx_vector3i_add(const t_ftx_vector3i *a, const t_ftx_vector3i *b, t_ftx_vector3i *dest);
 void	ftx_vector3f_add(const t_ftx_vector3f *a, const t_ftx_vector3f *b, t_ftx_vector3f *dest);

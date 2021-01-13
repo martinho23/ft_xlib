@@ -1,4 +1,4 @@
-NAME:=ft_xlib.a
+NAME:=libftx.a
 FILES:=	ftx_matrix4i_new \
 		ftx_matrix4i_delete \
 		ftx_matrix4i_print \
@@ -7,6 +7,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_matrixni_delete \
 		ftx_matrixni_print \
 		ftx_matrixni_new_by_return \
+		ftx_vector3f_populate \
 		ftx_vector3f_add \
 		ftx_vector3f_add_by_return \
 		ftx_vector3f_sub \
@@ -17,6 +18,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector3f_scalar_multiplication_by_return \
 		ftx_vector3f_square_magnitude \
 		ftx_vector3f_square_magnitude_by_return \
+		ftx_vector3i_populate \
 		ftx_vector3i_add \
 		ftx_vector3i_add_by_return \
 		ftx_vector3i_sub \
@@ -27,6 +29,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector3i_scalar_multiplication_by_return \
 		ftx_vector3i_square_magnitude \
 		ftx_vector3i_square_magnitude_by_return \
+		ftx_vector4f_populate \
 		ftx_vector4f_add \
 		ftx_vector4f_add_by_return \
 		ftx_vector4f_sub \
@@ -37,6 +40,7 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4f_scalar_multiplication_by_return \
 		ftx_vector4f_square_magnitude \
 		ftx_vector4f_square_magnitude_by_return \
+		ftx_vector4i_populate \
 		ftx_vector4i_add \
 		ftx_vector4i_add_by_return \
 		ftx_vector4i_sub \
