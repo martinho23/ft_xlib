@@ -11,7 +11,8 @@ LIBFT := libft.a
 LIBFTX := libftx.a
 INCLUDE := -I ../includes -I .
 BIND :=BIND
-all:tests
+
+all: $(LIBFTX) $(LIBFT) $(EXEC)
 
 $(LIBFT):
 	git submodule init
@@ -23,8 +24,6 @@ $(LIBFTX):
 
 .PHONY:
 
-tests : $(EXEC)
-
 $(EXEC) : %.exe : %.c
 	$(CXX) $(CFLAGS) -o$@ $< $(LIBSD) $(INCLUDE) $(LIB)
 
@@ -33,7 +32,10 @@ clean:
 
 re: clean all
 
-#run: $(EXEC)
+fclean: clean
+	make fclean -C ..
+	make fclean -C libft
+	#run: $(EXEC)
 #	chmod 755 $(EXEC)
 #	./test_vector3f.exe
 #	./test_vector4f.exe
