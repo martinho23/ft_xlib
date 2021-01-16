@@ -3,5 +3,5 @@
 libft/*
 .vscode/launch.json
 .vscode/tasks.json
-tests_d/*.exe
+tests_d/bin/*
 tests_d/libft
