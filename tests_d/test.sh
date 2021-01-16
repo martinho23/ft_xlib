@@ -1,8 +1,10 @@
 #!/bin/bash
 
-MAKE_PWD=$(find $(pwd) -name "tests_d")
-make -C $MAKE_PWD
-EXECS=$(find $MAKE_PWD -name "*.exe")
+MAKEFILE=$(find $(pwd) -name "makefile.tests")
+MAKE_PWD=$(echo $MAKEFILE | sed -e s_/makefile.tests__)
+make -f $MAKEFILE -C $MAKE_PWD
+BIN_PWD=$(find $MAKE_PWD -name "bin")
+EXECS=$(find $BIN_PWD -type f)
 $EXECS > output.txt; if [ $(cat output.txt | grep "###" | wc -l) = $(expr $(echo -n $(cat output.txt | grep "Tests run:" | cut -d " " -f 3) | sed -e s/' '/' + '/g)) ]
 then
 	echo ok

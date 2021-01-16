@@ -23,7 +23,7 @@ $(LIBFTX):
 
 .PHONY:
 
-$(EXEC) : %.exe : %.c
+$(EXEC) : %.exe : src/%.c
 	$(CXX) $(CFLAGS) -o$@ $< $(LIBSD) $(INCLUDE) $(LIB)
 
 clean:
