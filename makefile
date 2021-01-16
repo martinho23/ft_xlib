@@ -83,3 +83,6 @@ re: fclean all
 
 runTests:
 	@sh tests_d/test.sh
+
+makeTestsClean:
+	@make fclean -C tests_d -f makefile.tests
