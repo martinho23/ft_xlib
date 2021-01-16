@@ -22,10 +22,19 @@
 #include <libftx_priv.h>
 #include <libft.h>
 
-void	ftx_vector3f_scalar_multiplication(const t_ftx_vector3f *vec, const float scalar, t_ftx_vector3f *dest)
+void	ftx_vector3i_scalar_multiplication(const t_ftx_vector3i *vec, const int scalar, t_ftx_vector3i *dest)
 {
-	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector3i\n");
-	ft_thrower(!dest, "Can't store normalized t_ftx_vector3i on a NULL t_ftx_vector3i destination\n");
+	if(!vec && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl("Can't multiply a NULL t_ftx_vector3f, dest set to 0");
+		ftx_vector3i_populate(0, 0, 0, dest);
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't store a t_ftx_vector3f multiplication on a NULL t_ftx_vector3f destinatio");
+		return ;
+	}
 
 	dest->x = vec->x * scalar;
 	dest->y = vec->y * scalar;

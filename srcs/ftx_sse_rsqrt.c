@@ -21,7 +21,7 @@
 #include <libftx_priv.h>
 #include <immintrin.h>
 
-float ftx_rsqrt(float number)
+float ftx_sse_rsqrt(float number)
 {
 	return (_mm_cvtss_f32(_mm_rsqrt_ss(_mm_set_ps1(number))));
 }

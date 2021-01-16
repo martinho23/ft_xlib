@@ -21,11 +21,21 @@
 #include <libftx_priv.h>
 #include <libft.h>
 
-void	ftx_vector4i_normalize(const t_ftx_vector4i *vec, t_ftx_vector4i *dest)
+void	ftx_vector4i_normalize(const t_ftx_vector4i *vec, t_ftx_vector4f *dest)
 {
-	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector4i\n");
-	ft_thrower(!dest, "Can't store normalized t_ftx_vector4i on a NULL t_ftx_vector4i destination\n");
+	if((!vec) && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl("Can't normalize a Null t_ftx_vector4i dest is set to 0");
+		ftx_vector4f_populate(0, 0, 0, 0, dest); //Setting dest to 0
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't write on a Null t_ftx_vector4i");
+		return ;
+	}
 
 	const int reciproqueMagnitude = (int)ftx_sse_rsqrt((float)ftx_vector4i_square_magnitude_by_return(vec));
-	ftx_vector4i_scalar_multiplication(vec, reciproqueMagnitude, dest);
+	const t_ftx_vector4f	tmp =  {(float)vec->x, (float)vec->y, (float)vec->z, (float)vec->w}; /*convert vec from t_ftx_vector4i to t_ftx_vector4f*/
+	ftx_vector4f_scalar_multiplication(&tmp, reciproqueMagnitude, dest);
 }

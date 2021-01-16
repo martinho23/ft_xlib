@@ -19,9 +19,9 @@
 
 #include <libftx_priv.h>
 
-t_ftx_vector3i	ftx_vector3i_normalize_by_return(const t_ftx_vector3i *vec)
+t_ftx_vector3f	ftx_vector3i_normalize_by_return(const t_ftx_vector3i *vec)
 {
-	t_ftx_vector3i tmp;
+	t_ftx_vector3f tmp;
 
 	ftx_vector3i_normalize(vec, &tmp);
 	return (tmp);

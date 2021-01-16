@@ -23,8 +23,17 @@
 
 void	ftx_vector3f_normalize(const t_ftx_vector3f *vec, t_ftx_vector3f *dest)
 {
-	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector3f\n");
-	ft_thrower(!dest, "Can't store normalized t_ftx_vector3f on a NULL t_ftx_vector3f destination\n");
+	if(!vec && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl("Can't normalize a NULL t_ftx_vector3f");
+		ftx_vector3f_populate(0, 0, 0, dest);
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't store normalized t_ftx_vector3f on a NULL t_ftx_vector3f destination");
+		return ;
+	}
 
 	const float reciproqueMagnitude = ftx_sse_rsqrt(ftx_vector3f_square_magnitude_by_return(vec));
 	ftx_vector3f_scalar_multiplication(vec, reciproqueMagnitude, dest);

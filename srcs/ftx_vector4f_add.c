@@ -24,12 +24,22 @@
 
 void	ftx_vector4f_add(const t_ftx_vector4f *a, const t_ftx_vector4f *b, t_ftx_vector4f *dest)
 {
-	ft_thrower(!(a && b) ," Can't add a Null t_ftx_vector4f\n"); /*test if src vectors pointers are not NULL*/
-	ft_thrower(!(dest), "Can't write on a Null t_ftx_vector4f\n"); /*test if dest vector pointer is not NULL*/
+	if((!a || !b) && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl("Can't add a Null t_ftx_vector4f dest is set to 0");
+		ftx_vector4f_populate(0, 0, 0, 0, dest); //Setting dest to 0
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't write on a Null t_ftx_vector4f");
+		return ;
+	}
 
 	dest->x = a->x + b->x;
 	dest->y = a->y + b->y;
 	dest->z = a->z + b->z;
+	dest->w = a->w + b->w;
 }
 
 

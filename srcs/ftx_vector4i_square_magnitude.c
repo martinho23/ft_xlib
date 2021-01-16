@@ -24,8 +24,17 @@
 
 void	ftx_vector4i_square_magnitude(const t_ftx_vector4i *vec, int *dest)
 {
-	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector4i\n");
-	ft_thrower(!dest, "Can't store normalized t_ftx_vector4i on a NULL t_ftx_vector4i destination\n");
+	if((!vec) && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl(" Can't normalize a Null t_ftx_vector4i dest is set to 0");
+		*dest = 0;
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't write on a Null t_ftx_vector4i");
+		return ;
+	}
 
 	*dest = (vec->x * vec->x + vec->y * vec->y + vec->z * vec->z + vec->w * vec->w);
 }

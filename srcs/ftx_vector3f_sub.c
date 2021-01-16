@@ -24,8 +24,17 @@
 
 void	ftx_vector3f_sub(const t_ftx_vector3f *a, const t_ftx_vector3f *b, t_ftx_vector3f *dest)
 {
-	ft_thrower(!(a && b) ," Can't substract a Null t_ftx_vector3f\n"); /*test if src vectors pointers are not NULL*/
-	ft_thrower(!(dest), "Can't write on a Null t_ftx_vector3f\n"); /*test if dest vector pointer is not NULL*/
+	if((!a || !b) && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl("Can't substract a Null t_ftx_vector3f dest is set to 0");
+		ftx_vector3f_populate(0, 0, 0, dest); //Setting dest to 0
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't write on a Null t_ftx_vector3f");
+		return ;
+	}
 
 	dest->x = a->x - b->x;
 	dest->y = a->y - b->y;

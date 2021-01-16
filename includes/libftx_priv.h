@@ -128,15 +128,15 @@ int		ftx_vector4i_square_magnitude_by_return(const t_ftx_vector4i *vec);
 
 /*Normalizes a vector*/
 void	ftx_vector3f_normalize(const t_ftx_vector3f *vec, t_ftx_vector3f *dest);
-void	ftx_vector3i_normalize(const t_ftx_vector3i *vec, t_ftx_vector3i *dest);
+void	ftx_vector3i_normalize(const t_ftx_vector3i *vec, t_ftx_vector3f *dest);
 void	ftx_vector4f_normalize(const t_ftx_vector4f *vec, t_ftx_vector4f *dest);
-void	ftx_vector4i_normalize(const t_ftx_vector4i *vec, t_ftx_vector4i *dest);
+void	ftx_vector4i_normalize(const t_ftx_vector4i *vec, t_ftx_vector4f *dest);
 
 /*Normalizes the vector and return a normalized copy*/
 t_ftx_vector3f	ftx_vector3f_normalize_by_return(const t_ftx_vector3f *vec);
-t_ftx_vector3i	ftx_vector3i_normalize_by_return(const t_ftx_vector3i *vec);
+t_ftx_vector3f	ftx_vector3i_normalize_by_return(const t_ftx_vector3i *vec);
 t_ftx_vector4f	ftx_vector4f_normalize_by_return(const t_ftx_vector4f *vec);
-t_ftx_vector4i	ftx_vector4i_normalize_by_return(const t_ftx_vector4i *vec);
+t_ftx_vector4f	ftx_vector4i_normalize_by_return(const t_ftx_vector4i *vec);
 
 /*
 **Maths Functions

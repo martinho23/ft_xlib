@@ -24,8 +24,17 @@
 
 void	ftx_vector4f_scalar_multiplication(const t_ftx_vector4f *vec, const float scalar, t_ftx_vector4f *dest)
 {
-	ft_thrower(!vec, "Can't normalize a NULL t_ftx_vector4f\n");
-	ft_thrower(!dest, "Can't store normalized t_ftx_vector4f on a NULL t_ftx_vector4f destination\n");
+	if((!vec) && dest) /*test if src vectors pointers are not NULL*/
+	{
+		ft_putendl(" Can't muiltiply a Null t_ftx_vector4fi, dest is set to 0");
+		ftx_vector4f_populate(0, 0, 0, 0, dest); //Setting dest to 0
+		return ;
+	}
+	if(!dest) /*test if dest vector pointer is not NULL*/
+	{
+		ft_putendl("Can't write on a Null t_ftx_vector4f");
+		return ;
+	}
 
 	dest->x = vec->x * scalar;
 	dest->y = vec->y * scalar;

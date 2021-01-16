@@ -28,13 +28,20 @@ void	ftx_matrixni_new(t_ftx_matrixni *matrixToInit, size_t matrixCollums, size_t
 {
 	size_t  i;
 
-	ft_thrower(!(*matrixToInit = (int **)malloc(sizeof(int *) * matrixCollums)),\
-	"Error could not alocate Integer NxN Matrix\n");
+	if(!(*matrixToInit = (int **)malloc(sizeof(int *) * matrixCollums)))
+	{
+		ft_putendl("Error could not alocate Integer NxN Matrix");
+		*matrixToInit = NULL;
+		return ;
+	}
 	i = 0;
 	while (i < matrixCollums)
 	{
-		ft_thrower(!((*matrixToInit)[i] = (int *)malloc(sizeof(int) * matrixRows)),\
-		"Error could not alocate an Integer NxN Matrix\n");
+		if(!((*matrixToInit)[i] = (int *)malloc(sizeof(int) * matrixRows)))
+		{
+			ft_putendl("Error could not alocate an Integer NxN Matrix");
+			*matrixToInit[i] = NULL;
+		}
 		i++;
 	}
 }

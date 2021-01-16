@@ -20,7 +20,7 @@
 
 #include <libftx_priv.h>
 
-float	ftx_vector4f_squared_magnitude_by_return(const t_ftx_vector4f *vec)
+float	ftx_vector4f_square_magnitude_by_return(const t_ftx_vector4f *vec)
 {
 	float tmp;
 	ftx_vector4f_square_magnitude(vec, &tmp);
