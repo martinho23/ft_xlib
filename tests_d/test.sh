@@ -11,5 +11,5 @@ else
 	echo -n "Error: " 
 	cat output.txt
 	rm -rf output.txt
-	echo "Exit with code -1"
+	exit -1
 fi
