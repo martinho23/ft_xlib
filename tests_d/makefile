@@ -15,7 +15,7 @@ BIND :=BIND
 all: $(LIBFTX) $(LIBFT) $(EXEC)
 
 $(LIBFT):
-	git submodule update --init --remote
+	git submodule update --init --remote --recursive
 	make -C libft
 
 $(LIBFTX):
