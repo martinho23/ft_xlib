@@ -1,3 +1,6 @@
-[submodule "tests/libft"]
-	path = tests/libft
+[submodule "tests_d/libft"]
+	path = tests_d/libft
+	url = https://github.com/martinho23/libft.git
+[submodule "tests_d/tests_d/libft"]
+	path = tests_d/tests_d/libft
 	url = https://github.com/martinho23/libft.git
