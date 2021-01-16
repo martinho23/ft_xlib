@@ -21,9 +21,12 @@ $(LIBFT):
 $(LIBFTX):
 	make -C ..
 
+$(BINDIR):
+	mkdir -p bin
+
 .PHONY:
 
-$(EXEC) : $(BINDIR)% : $(SRCDIR)%.c
+$(EXEC) : $(BINDIR)% : $(SRCDIR)%.c $(BINDIR)
 	$(CXX) $(CFLAGS) -o$@ $< $(LIBSD) $(INCLUDE) $(LIB)
 
 clean:
