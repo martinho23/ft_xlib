@@ -71,6 +71,8 @@ all:$(NAME)
 %.o: %.c
 	gcc $(CFLAGS) -I $(IDIR) -c $< -o $@
 
+.PHONI:
+
 clean:
 	rm -f $(BINS)
 
@@ -78,3 +80,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+runTests:
+	@sh tests_d/test.sh
