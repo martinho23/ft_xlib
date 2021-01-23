@@ -7,7 +7,7 @@ EXEC := $(addprefix $(BINDIR), $(EXEC))
 CXX := gcc
 CFLAGS := -Wall -Wextra -Wall
 LIBSD := -L .. -L libft
-LIB := -lft -lm -lftx
+LIB := -lm -lftx -lft
 LIBFT := libft.a
 LIBFTX := libftx.a
 INCLUDE := -I ../includes -I .
@@ -15,7 +15,6 @@ INCLUDE := -I ../includes -I .
 all: $(LIBFTX) $(LIBFT) $(EXEC)
 
 $(LIBFT):
-	git submodule update --init --remote --recursive
 	make -C libft
 
 $(LIBFTX):
@@ -27,7 +26,7 @@ $(BINDIR):
 .PHONY:
 
 $(EXEC) : $(BINDIR)% : $(SRCDIR)%.c $(BINDIR)
-	$(CXX) $(CFLAGS) -o$@ $< $(LIBSD) $(INCLUDE) $(LIB)
+	$(CXX) $(CFLAGS) -o$@ $< $(INCLUDE) $(LIBSD) $(LIB)
 
 clean:
 	rm -rf $(EXEC)
