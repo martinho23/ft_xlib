@@ -285,6 +285,7 @@ static char * all_tests() {
 	mu_run_test(t_ftx_vector3f_scalar_multiplication);
 	mu_run_test(t_ftx_vector3f_normalize);
 	mu_run_test(t_ftx_vector3f_sub);
+	mu_run_test(t_ftx_vector3f_scalar_addition);
 	return 0;
 }
 
