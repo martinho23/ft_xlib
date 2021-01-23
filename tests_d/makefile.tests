@@ -15,7 +15,6 @@ INCLUDE := -I ../includes -I .
 all: $(LIBFTX) $(LIBFT) $(EXEC)
 
 $(LIBFT):
-	
 	git submodule update --init --remote
 	make -C libft
 
