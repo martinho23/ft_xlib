@@ -15,7 +15,7 @@ INCLUDE := -I ../includes -I .
 all: $(LIBFTX) $(LIBFT) $(EXEC)
 
 $(LIBFT):
-	git submodule update --init --remote
+	git submodule update --init
 	make -C libft
 
 $(LIBFTX):
@@ -37,9 +37,3 @@ re: clean all
 fclean: clean
 	make fclean -C ..
 	make fclean -C libft
-	#run: $(EXEC)
-#	chmod 755 $(EXEC)
-#	./test_vector3f.exe
-#	./test_vector4f.exe
-#	./test_vector3i.exe
-#	./test_vector4i.exe
