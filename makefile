@@ -14,6 +14,8 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector3f_sub_by_return \
 		ftx_vector3f_normalize \
 		ftx_vector3f_normalize_by_return \
+		ftx_vector3f_scalar_addition \
+		ftx_vector3f_scalar_addition_by_return \
 		ftx_vector3f_scalar_multiplication \
 		ftx_vector3f_scalar_multiplication_by_return \
 		ftx_vector3f_square_magnitude \
@@ -25,6 +27,8 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector3i_sub_by_return \
 		ftx_vector3i_normalize \
 		ftx_vector3i_normalize_by_return \
+		ftx_vector3i_scalar_addition \
+		ftx_vector3i_scalar_addition_by_return \
 		ftx_vector3i_scalar_multiplication \
 		ftx_vector3i_scalar_multiplication_by_return \
 		ftx_vector3i_square_magnitude \
@@ -36,6 +40,8 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4f_sub_by_return \
 		ftx_vector4f_normalize \
 		ftx_vector4f_normalize_by_return \
+		ftx_vector4f_scalar_addition \
+		ftx_vector4f_scalar_addition_by_return \
 		ftx_vector4f_scalar_multiplication \
 		ftx_vector4f_scalar_multiplication_by_return \
 		ftx_vector4f_square_magnitude \
@@ -47,6 +53,8 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4i_sub_by_return \
 		ftx_vector4i_normalize \
 		ftx_vector4i_normalize_by_return \
+		ftx_vector4i_scalar_addition \
+		ftx_vector4i_scalar_addition_by_return \
 		ftx_vector4i_scalar_multiplication \
 		ftx_vector4i_scalar_multiplication_by_return \
 		ftx_vector4i_square_magnitude \

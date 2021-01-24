@@ -114,6 +114,18 @@ t_ftx_vector3i	ftx_vector3i_scalar_multiplication_by_return(const t_ftx_vector3i
 t_ftx_vector4f	ftx_vector4f_scalar_multiplication_by_return(const t_ftx_vector4f *vec, const float scalar);
 t_ftx_vector4i	ftx_vector4i_scalar_multiplication_by_return(const t_ftx_vector4i *vec, const int scalar);
 
+/*Adds a vector with a scalar value*/
+void	ftx_vector3f_scalar_addition(const t_ftx_vector3f *vec, const float scalar, t_ftx_vector3f *dest);
+void	ftx_vector3i_scalar_addition(const t_ftx_vector3i *vec, const int scalar, t_ftx_vector3i *dest);
+void	ftx_vector4f_scalar_addition(const t_ftx_vector4f *vec, const float scalar, t_ftx_vector4f *dest);
+void	ftx_vector4i_scalar_addition(const t_ftx_vector4i *vec, const int scalar, t_ftx_vector4i *dest);
+
+/*Adds a vector with a scalar value and return the result*/
+t_ftx_vector3f	ftx_vector3f_scalar_addition_by_return(const t_ftx_vector3f *vec, const float scalar);
+t_ftx_vector3i	ftx_vector3i_scalar_addition_by_return(const t_ftx_vector3i *vec, const int scalar);
+t_ftx_vector4f	ftx_vector4f_scalar_addition_by_return(const t_ftx_vector4f *vec, const float scalar);
+t_ftx_vector4i	ftx_vector4i_scalar_addition_by_return(const t_ftx_vector4i *vec, const int scalar);
+
 /*Calculates the Squared magnitude of a vector*/
 void	ftx_vector3f_square_magnitude(const t_ftx_vector3f *vec, float *dest);
 void	ftx_vector3i_square_magnitude(const t_ftx_vector3i *vec, int *dest);

@@ -22,7 +22,7 @@
 #include <libftx_priv.h>
 #include <libft.h>
 
-void	ftx_vector3f_scalar_addition(const t_ftx_vector3f *vec, float scalar, t_ftx_vector3f *dest)
+void	ftx_vector3f_scalar_addition(const t_ftx_vector3f *vec, const float scalar, t_ftx_vector3f *dest)
 {
 	if (!dest)
 	{
