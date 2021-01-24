@@ -182,23 +182,32 @@ static char * t_ftx_vector3i_normalize()
 	t_ftx_vector3i vec = {3, 3, 3};
 	t_ftx_vector3f dest = {4, 4, 4};
 	ftx_vector3i_normalize(&vec, &dest);
-	mu_assert("Normalization of vec.x: %i is != dest.x: %f", dest.x == (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))), vec.x, dest.x);
-	mu_assert("Normalization of vec.y: %i is != dest.y: %f", dest.y == (vec.y * (ftx_sse_rsqrt(vec.y * vec.y + vec.y * vec.y + vec.z * vec.z))), vec.y, dest.y);
-	mu_assert("Normalization of vec.z: %i is != dest.z: %f", dest.z == (vec.z * (ftx_sse_rsqrt(vec.z * vec.z + vec.y * vec.y + vec.z * vec.z))), vec.z, dest.z);
+	mu_assert("Normalization of vec.x: %f is != dest.x: %f", dest.x == (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))),\
+		dest.x, (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
+	mu_assert("Normalization of vec.y: %f is != dest.y: %f", dest.y == (vec.y * (ftx_sse_rsqrt(vec.y * vec.y + vec.y * vec.y + vec.z * vec.z))),\
+		dest.y, (vec.y * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
+	mu_assert("Normalization of vec.z: %f is != dest.z: %f", dest.z == (vec.z * (ftx_sse_rsqrt(vec.z * vec.z + vec.y * vec.y + vec.z * vec.z))),\
+		dest.z, (vec.z * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
 
 	ftx_vector3i_populate(-4, 4, 4, &vec);
 	ftx_vector3f_populate(4, 4, 4, &dest);
 	ftx_vector3i_normalize(&vec, &dest);
-	mu_assert("Normalization of vec.x: %i is != dest.x: %f", dest.x == (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))), vec.x, dest.x);
-	mu_assert("Normalization of vec.y: %i is != dest.y: %f", dest.y == (vec.y * (ftx_sse_rsqrt(vec.y * vec.y + vec.y * vec.y + vec.z * vec.z))), vec.y, dest.y);
-	mu_assert("Normalization of vec.z: %i is != dest.z: %f", dest.z == (vec.z * (ftx_sse_rsqrt(vec.z * vec.z + vec.y * vec.y + vec.z * vec.z))), vec.z, dest.z);
+	mu_assert("Normalization of vec.x: %f is != dest.x: %f", dest.x == (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))),\
+		dest.x, (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
+	mu_assert("Normalization of vec.y: %f is != dest.y: %f", dest.y == (vec.y * (ftx_sse_rsqrt(vec.y * vec.y + vec.y * vec.y + vec.z * vec.z))),\
+		dest.y, (vec.y * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
+	mu_assert("Normalization of vec.z: %f is != dest.z: %f", dest.z == (vec.z * (ftx_sse_rsqrt(vec.z * vec.z + vec.y * vec.y + vec.z * vec.z))),\
+		dest.z, (vec.z * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
 
 	ftx_vector3i_populate(3, 3, 3, &vec);
 	ftx_vector3f_populate(4, 4, 4, &dest);
 	dest = ftx_vector3i_normalize_by_return(&vec);
-	mu_assert("Normalization of vec.x: %i is != dest.x: %f", dest.x == (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))), vec.x, dest.x);
-	mu_assert("Normalization of vec.y: %i is != dest.y: %f", dest.y == (vec.y * (ftx_sse_rsqrt(vec.y * vec.y + vec.y * vec.y + vec.z * vec.z))), vec.y, dest.y);
-	mu_assert("Normalization of vec.z: %i is != dest.z: %f", dest.z == (vec.z * (ftx_sse_rsqrt(vec.z * vec.z + vec.y * vec.y + vec.z * vec.z))), vec.z, dest.z);
+	mu_assert("Normalization of vec.x: %f is != dest.x: %f", dest.x == (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))),\
+		dest.x, (vec.x * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
+	mu_assert("Normalization of vec.y: %f is != dest.y: %f", dest.y == (vec.y * (ftx_sse_rsqrt(vec.y * vec.y + vec.y * vec.y + vec.z * vec.z))),\
+		dest.y, (vec.y * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
+	mu_assert("Normalization of vec.z: %f is != dest.z: %f", dest.z == (vec.z * (ftx_sse_rsqrt(vec.z * vec.z + vec.y * vec.y + vec.z * vec.z))),\
+		dest.z, (vec.z * (ftx_sse_rsqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z))));
 
 	ftx_vector3f_populate(4, 4, 4, &dest);
 	ftx_vector3i_normalize(NULL, &dest);
@@ -277,6 +286,46 @@ static char * t_ftx_vector3i_sub()
 	return (0);
 }
 
+// ===  TEST  ==========================================================================
+//         Name:  t_ftx_vector3i_scalar_addition
+//  Description:  Tests the ftx_vector3i_scalar_addition function
+// =====================================================================================
+
+
+static char * t_ftx_vector3i_scalar_addition()
+{
+	t_ftx_vector3i	vec    = {1, 2, 3};
+	t_ftx_vector3i	dest   = {9, 9, 9};
+	int				scalar = 5;
+  
+	ftx_vector3i_scalar_addition(&vec, scalar, &dest);
+	mu_assert("Vector vec.x: %d + scalar: %d != dest.x: %d\n", vec.x + scalar == dest.x, vec.x, scalar, dest.x);
+	mu_assert("Vector vec.y: %d + scalar: %d != dest.y: %d\n", vec.y + scalar == dest.y, vec.y, scalar, dest.y);
+	mu_assert("Vector vec.z: %d + scalar: %d != dest.z: %d\n", vec.z + scalar == dest.z, vec.z, scalar, dest.z);
+
+	ftx_vector3i_populate(9, 9, 9, &dest);
+	dest = ftx_vector3i_scalar_addition_by_return(&vec, scalar);
+	mu_assert("Vector vec.x: %d + scalar: %d != dest.x: %d\n", vec.x + scalar == dest.x, vec.x, scalar, dest.x);
+	mu_assert("Vector vec.y: %d + scalar: %d != dest.y: %d\n", vec.y + scalar == dest.y, vec.y, scalar, dest.y);
+	mu_assert("Vector vec.z: %d + scalar: %d != dest.z: %d\n", vec.z + scalar == dest.z, vec.z, scalar, dest.z);
+
+	ftx_vector3i_populate(9, 9, 9, &dest);
+	ftx_vector3i_scalar_addition(NULL, scalar, &dest);
+	mu_assert("Scalar addition on a NULL t_ftx_vector3f din't changed dest.x: %d to 0\n", dest.x == 0, dest.x);
+	mu_assert("Scalar addition on a NULL t_ftx_vector3f din't changed dest.x: %d to 0\n", dest.y == 0, dest.y);
+	mu_assert("Scalar addition on a NULL t_ftx_vector3f din't changed dest.x: %d to 0\n", dest.z == 0, dest.z);
+
+	ftx_vector3i_populate(9, 9, 9, &dest);
+	dest = ftx_vector3i_scalar_addition_by_return(NULL, scalar);
+	mu_assert("Scalar addition on a NULL t_ftx_vector3f din't changed dest.x: %d to 0\n", dest.x == 0, dest.x);
+	mu_assert("Scalar addition on a NULL t_ftx_vector3f din't changed dest.x: %d to 0\n", dest.y == 0, dest.y);
+	mu_assert("Scalar addition on a NULL t_ftx_vector3f din't changed dest.x: %d to 0\n", dest.z == 0, dest.z);
+
+	ft_putendl("\n### ALL TESTS ON t_ftx_vector3i_scalar_addition PASSED ###\n");
+
+return (0);
+}
+
 static char * all_tests() {
 
 	mu_run_test(t_ftx_vector3i_populate);
@@ -285,6 +334,8 @@ static char * all_tests() {
 	mu_run_test(t_ftx_vector3i_scalar_multiplication);
 	mu_run_test(t_ftx_vector3i_normalize);
 	mu_run_test(t_ftx_vector3i_sub);
+	mu_run_test(t_ftx_vector3i_scalar_addition);
+
 	return 0;
 }
 
