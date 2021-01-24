@@ -35,7 +35,7 @@ void	ftx_vector4i_normalize(const t_ftx_vector4i *vec, t_ftx_vector4f *dest)
 		return ;
 	}
 
-	const int reciproqueMagnitude = (int)ftx_sse_rsqrt((float)ftx_vector4i_square_magnitude_by_return(vec));
+	const float reciproqueMagnitude = ftx_sse_rsqrt((float)ftx_vector4i_square_magnitude_by_return(vec));
 	const t_ftx_vector4f	tmp =  {(float)vec->x, (float)vec->y, (float)vec->z, (float)vec->w}; /*convert vec from t_ftx_vector4i to t_ftx_vector4f*/
 	ftx_vector4f_scalar_multiplication(&tmp, reciproqueMagnitude, dest);
 }
