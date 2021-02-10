@@ -21,12 +21,10 @@
 
 #include <stdarg.h>
 
-typedef struct errorDetails ErrorDetails;
-
 /* file: minunit.h */
-#define mu_assert(message, test, ...) do { if (!(test)){ printf(message, ##__VA_ARGS__); return message; }} while (0)
-#define mu_run_test(test) do {char * message = test(); tests_run++; \
-	if (message) return message; } while (0)
+#define mu_assert(message, test, ...) do { if (!(test)){ printf(message, ##__VA_ARGS__); return (1); }} while (0)
+#define mu_run_test(test) do {int res = test(); tests_run++; \
+	if (res) return (1); } while (0)
 extern int tests_run;
 
 #endif		//end of _MINUNIT_H

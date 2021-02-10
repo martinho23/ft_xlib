@@ -31,7 +31,7 @@ float ftx_rsqrt(float number)
 	{
 		float f;
 		uint32_t i;
-	} conv = { .f = number}; /* Union to convert n from flaot to uint and the oposite */
+	} conv = { .f = number}; /* Union to convert n from float to uint and the oposite */
 	conv.i = c1 - (conv.i >> 1);
 	conv.f = c2 * conv.f * (c3 - number * conv.f * conv.f);
 
