@@ -150,9 +150,45 @@ t_ftx_vector3f	ftx_vector3i_normalize_by_return(const t_ftx_vector3i *vec);
 t_ftx_vector4f	ftx_vector4f_normalize_by_return(const t_ftx_vector4f *vec);
 t_ftx_vector4f	ftx_vector4i_normalize_by_return(const t_ftx_vector4i *vec);
 
+/*Point*/
+typedef struct s_ftx_point
+{
+	int		x;
+	int		y;
+}	t_ftx_point;
+
+/*Point Array*/
+typedef struct s_ftx_point_array
+{
+	t_ftx_point	*array;
+	int			index;
+	int			size;
+}	t_ftx_point_array;
+
+typedef struct s_mlx_info
+{
+	void	*mlx_ptr;
+	void	*mlx_win;
+}	t_mlx_info;
+
+typedef struct s_mlx_pixel
+{
+	t_mlx_info	*mlx_info;
+	int			color;
+}	t_mlx_pixel;
+
 /*
 **Maths Functions
 */
-float ftx_fast_rsqrt(float number);
-float ftx_sse_rsqrt(float number);
+float	ftx_fast_rsqrt(float number);
+float	ftx_sse_rsqrt(float number);
+int		ftx_absi(int number);
+
+/*
+**Drawing Functions
+*/
+void	ftx_calculate_line(const t_ftx_point *start, const t_ftx_point *end, void ftx_putpixel(const t_ftx_point pixel, const void *pixelData), void *pixelData);
+void	ftx_put_mlx_pixel(const t_ftx_point pixel, const void *data);
+void	ftx_put_point_toa(const t_ftx_point pixel, const void *data);
+void	ftx_put_point_stdout(const t_ftx_point point, const void *data);
 #endif /* !LIBFTX_h */

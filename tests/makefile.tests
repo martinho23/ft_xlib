@@ -1,11 +1,11 @@
-EXEC := test_vector3f test_vector4f test_vector3i test_vector4i
+EXEC := test_vector3f test_vector4f test_vector3i test_vector4i test_line
 BINDIR :=bin/
 SRCDIR := src/
 FILES := $(addsuffix .c, $(EXEC))
 FILES := $(addprefix $(SRCDIR), $(FILES))
 EXEC := $(addprefix $(BINDIR), $(EXEC))
 CXX := gcc
-CFLAGS := -Wall -Wextra -Wall -g
+CFLAGS := -Wall -Wextra -Wall -g -fsanitize=bounds -fsanitize=address
 LIBSD := -L .. -L libft
 LIB := -lm -lftx -lft
 LIBFT := libft.a

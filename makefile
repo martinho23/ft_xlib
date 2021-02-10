@@ -60,7 +60,12 @@ FILES:=	ftx_matrix4i_new \
 		ftx_vector4i_square_magnitude \
 		ftx_vector4i_square_magnitude_by_return \
 		ftx_fast_rsqrt \
-		ftx_sse_rsqrt
+		ftx_sse_rsqrt \
+		ftx_absi \
+		ftx_calculate_line \
+		ftx_put_mlx_pixel \
+		ftx_put_point_toa \
+		ftx_put_point_stdout
 
 IDIR:=includes
 CFLAGS:=-Werror -Wextra -Wall -g -O3
@@ -90,7 +95,7 @@ fclean: clean
 re: fclean all
 
 runTests:
-	@sh tests_d/test.sh
+	@sh tests/test.sh
 
 makeTestsClean:
-	@make fclean -C tests_d -f makefile.tests
+	@make fclean -C tests -f makefile.tests

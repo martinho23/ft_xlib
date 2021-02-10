@@ -31,7 +31,7 @@ int tests_run = 0;
 	//  Description:  Test function ftx_vector4i_populate
 	// =====================================================================================
 
-static char * t_ftx_vector4i_populate()
+static int  t_ftx_vector4i_populate()
 {
 //	ft_putendl("### STARTING t_ftx_vector4i_populate TESTS ###\n");
 
@@ -58,7 +58,7 @@ static char * t_ftx_vector4i_populate()
 	//  Description:  Test function ftx_vector4i_add
 // =========================================================================================
 
-static char * t_ftx_vector4i_add() 
+static int  t_ftx_vector4i_add() 
 {
 //	ft_putendl("### STARTING t_ftx_vector4i_add TESTS ###\n");
 
@@ -121,7 +121,7 @@ static char * t_ftx_vector4i_add()
 	//  Description:  Test function t_ftx_vector4i_square_magnitude)
 	// =====================================================================================
 
-static char * t_ftx_vector4i_square_magnitude()
+static int  t_ftx_vector4i_square_magnitude()
 {
 	t_ftx_vector4i vec = {2, 2, 2, 2};
 	int dest = 0;
@@ -150,7 +150,7 @@ ft_putendl("\n### ALL TESTS ON t_ftx_vector4i_square_magnitude PASSED ###\n");
 	//  Description:  Test function t_ftx_vector4i_scalar_multiplication)
 	// =====================================================================================
 
-static char * t_ftx_vector4i_scalar_multiplication()
+static int  t_ftx_vector4i_scalar_multiplication()
 {
 	t_ftx_vector4i vec = {1, 2, 3, 4};
 	t_ftx_vector4i dest = {0, 0, 0, 0};
@@ -188,7 +188,7 @@ static char * t_ftx_vector4i_scalar_multiplication()
 	return 0;
 }
 
-static char * t_ftx_vector4i_normalize()
+static int  t_ftx_vector4i_normalize()
 {
 	t_ftx_vector4i vec = {3, 3, 3, 3};
 	t_ftx_vector4f dest = {4, 4, 4, 4};
@@ -255,7 +255,7 @@ static char * t_ftx_vector4i_normalize()
 	//  Description:  Test function ftx_vector4i_sub
 	// =====================================================================================
 
-static char * t_ftx_vector4i_sub()
+static int  t_ftx_vector4i_sub()
 {
 
 	t_ftx_vector4i a = {0, 1, 2, 3};
@@ -316,7 +316,7 @@ static char * t_ftx_vector4i_sub()
 //  Description:  Tests the ftx_vector4i_scalar_addition function
 // =====================================================================================
 
-static char * t_ftx_vector4i_scalar_addition()
+static int  t_ftx_vector4i_scalar_addition()
 {
 	t_ftx_vector4i	vec    = {1, 2, 3, 4};
 	t_ftx_vector4i	dest   = {9, 9, 9, 9};
@@ -354,7 +354,7 @@ static char * t_ftx_vector4i_scalar_addition()
 	return (0);
 }
 
-static char * all_tests() {
+static int  all_tests() {
 
 	mu_run_test(t_ftx_vector4i_populate);
 	mu_run_test(t_ftx_vector4i_add);
@@ -368,7 +368,7 @@ static char * all_tests() {
 }
 
 int main(void) {
-	char *result = all_tests();
+	int		result = all_tests();
 
 	if (result != 0) 
 	{
