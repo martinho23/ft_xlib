@@ -5,7 +5,7 @@ FILES := $(addsuffix .c, $(EXEC))
 FILES := $(addprefix $(SRCDIR), $(FILES))
 EXEC := $(addprefix $(BINDIR), $(EXEC))
 CXX := gcc
-CFLAGS := -Wall -Wextra -Wall -g
+CFLAGS := -Wall -Wextra -Wall -g -fsanitize=bounds -fsanitize=address
 LIBSD := -L .. -L libft
 LIB := -lm -lftx -lft
 LIBFT := libft.a
