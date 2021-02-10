@@ -1,9 +1,8 @@
 *.o
 *.a
-libft/*
 .vscode/launch.json
 .vscode/tasks.json
-tests_d/bin/*
-tests_d/libft
+tests/bin/*
+tests/libft
 *.ycm*
 .vimrc
