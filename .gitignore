@@ -5,3 +5,5 @@ libft/*
 .vscode/tasks.json
 tests_d/bin/*
 tests_d/libft
+*.ycm*
+.vimrc
