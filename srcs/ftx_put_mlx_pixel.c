@@ -17,6 +17,7 @@
  */
 
 #include <libftx_priv.h>
+#include <libft.h>
 #include <mlx.h>
 
 void	ftx_put_mlx_pixel(t_ftx_point pixel, const void *pixelData)
