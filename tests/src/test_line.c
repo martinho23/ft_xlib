@@ -223,13 +223,49 @@ static int t_line_base()
 	a.y = 5;
 	b.x = 5;
 	b.y = 0;
+	ftx_calculate_line(&a, &b, ftx_put_point_stdout, NULL);
 	ftx_calculate_line(&a, &b, ftx_put_point_toa, &arrayData);
-	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[5].x == 5 && buff[5].y == 5, buff[5].x, buff[5].y, 5, 5);
-	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[4].x == 5 && buff[4].y == 4, buff[4].x, buff[4].y, 5, 4);
-	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[3].x == 5 && buff[3].y == 3, buff[3].x, buff[3].y, 5, 3);
-	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[2].x == 5 && buff[2].y == 2, buff[2].x, buff[2].y, 5, 2);
-	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[1].x == 5 && buff[1].y == 1, buff[1].x, buff[1].y, 5, 1);
 	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[0].x == 5 && buff[0].y == 0, buff[0].x, buff[0].y, 5, 0);
+	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[1].x == 5 && buff[1].y == 1, buff[1].x, buff[1].y, 5, 1);
+	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[2].x == 5 && buff[2].y == 2, buff[2].x, buff[2].y, 5, 2);
+	mu_assert("Calculate line X: %d Y: %d and expected X: %d Y: %d\n", buff[3].x == 5 && buff[3].y == 3, buff[3].x, buff[3].y, 5, 3);
+	ft_putendl("");
+
+	arrayData.index = 0;
+	ft_putendl("Line A[5, 5] B[0, 5]");
+	a.x = 5;
+	a.y = 5;
+	b.x = 0;
+	b.y = 5;
+	ftx_calculate_line(&a, &b, ftx_put_point_toa, &arrayData);
+	ft_putendl("");
+
+	arrayData.index = 0;
+	ft_putendl("Line A[5, 5] B[10, 10]");
+	a.x = 5;
+	a.y = 5;
+	b.x = 10;
+	b.y = 10;
+	ftx_calculate_line(&a, &b, ftx_put_point_toa, &arrayData);
+	ft_putendl("");
+
+	arrayData.index = 0;
+	ft_putendl("Line A[5, 5] B[0, 10]");
+	a.x = 5;
+	a.y = 5;
+	b.x = 0;
+	b.y = 10;
+	ftx_calculate_line(&a, &b, ftx_put_point_toa, &arrayData);
+	ft_putendl("");
+
+	arrayData.index = 0;
+	ft_putendl("Line A[5, 5] B[10, 0]");
+	a.x = 5;
+	a.y = 5;
+	b.x = 10;
+	b.y = 0;
+	ftx_calculate_line(&a, &b, ftx_put_point_toa, &arrayData);
+	ftx_calculate_line(&a, &b, ftx_put_point_stdout, NULL);
 	ft_putendl("");
 	ft_putendl("\n### ALL TESTS ON t_line_base PASSED ###\n");
 
