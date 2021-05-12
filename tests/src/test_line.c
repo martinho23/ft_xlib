@@ -21,8 +21,6 @@
 #include <minunit.h>
 #include <stdio.h>
 
-#define ftx_putpixel(x, y) map[x][y] = '*'
-
 int		tests_run = 0;
 
 // ===  TEST  ==========================================================================
@@ -269,7 +267,6 @@ static int t_line_base()
 	ftx_calculate_line(&a, &b, ftx_put_point_toa, &arrayData);
 	ftx_calculate_line(&a, &b, ftx_put_point_stdout, NULL);
 	ft_putendl("");
-
 	ft_putendl("\n### ALL TESTS ON t_line_base PASSED ###\n");
 
 	return (0);
